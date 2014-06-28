@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>{% block title %}Planet [IDJS]{% endblock %}</title>
+
+<!--# include virtual="/includes/header.html" -->
+
+<div class="page">
+{% block content %}{% endblock %}
+</div>
+
+<sidebar>
+{% block sidebar %}
+<!--# include virtual="/includes/sidebar.html" -->
+{% endblock %}
+</sidebar>
+
+<footer>
+{% block footer %}
+<!--# include virtual="/includes/footer.html" -->
+{% endblock %}
+</footer>

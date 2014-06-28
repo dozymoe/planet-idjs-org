@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title -%}
+    Latest {{ count }} posts for {{ object.0.published.strftime('%B %Y') }} [IDJS]
+{%- endblock %}
+
+{% block content %}
+<h1>Latest {{ count }} posts for {{ object.0.published.strftime('%B %Y') }}</h1>
+<ol>
+    {% for o in object %}
+    <li><h2><a href="{{ o.local_url }}">{{ o.title }}</a></h2>
+        <!--# include virtual="{{ o.local_desc_url }}" -->
+    {% endfor %}
+</ol>
+{% endblock %}
+
+{% block sidebar %}{% endblock %}

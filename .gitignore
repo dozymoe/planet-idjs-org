@@ -1,0 +1,9 @@
+/.virtualenv/
+/htdocs/
+/python_modules
+/tmp/
+/uploads/
+
+/fabfile.py
+
+*.pyc

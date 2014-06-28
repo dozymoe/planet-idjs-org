@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title -%}
+    {{ object.title }} [IDJS]
+{%- endblock %}
+
+{% block content %}
+    <h1>{{ object.title|title }}</h1>
+    {{ object.content|safe }}
+{% endblock %}
+
+{% block footer %}
+    <p>Written by: <a href="{{ object.author_url }}">{{ object.author_name }}</a>
+    {{ super() }}
+{% endblock %}
