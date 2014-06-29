@@ -1,5 +1,6 @@
 /.virtualenv/
 /htdocs/
+/htdocs/includes/teasers/
 /python_modules
 /tmp/
 /uploads/
