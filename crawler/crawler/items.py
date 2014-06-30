@@ -30,7 +30,6 @@ class BlogItem(Item):
 class KeripixPethakItem(BlogItem):
     def is_valid(self):
         for c in self['categories']:
-            if c.lower() in ('belajar javascript', 'idjs',
-                             'javascript-id'):
+            if c.lower() in ('planet-idjs', 'javascript-id'):
                 return True
         return False
