@@ -3,7 +3,7 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-from scrapy.contrib.loader.processor import Compose, Join, TakeFirst
+from scrapy.contrib.loader.processor import Compose, TakeFirst
 from scrapy.item import Item, Field
 
 from .processors import filter_html
@@ -24,10 +24,6 @@ class BlogItem(Item):
     images = Field()
     local_url = Field()
     
-    def is_valid(self):
-        return True
-
-class KeripixPethakItem(BlogItem):
     def is_valid(self):
         for c in self['categories']:
             if c.lower() in ('planet-idjs', 'javascript-id'):

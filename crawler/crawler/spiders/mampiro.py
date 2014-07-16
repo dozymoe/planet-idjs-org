@@ -7,17 +7,17 @@ from crawler.utils import unescape
 from ..items import BlogItem
 
 
-class KeripixPethakSpider(XMLFeedSpider):
-    name = 'keripix_pethak'
-    allowed_domains = ['keripix.pethak.com']
-    start_urls = ['http://keripix.pethak.com/feed/']
+class MampiroSpider(XMLFeedSpider):
+    name = 'mampiro'
+    allowed_domains = ['mampiro.com']
+    start_urls = ['http://mampiro.com/feed/']
     iterator = 'iternodes' # you can change this; see the docs
     itertag = 'item' # change it accordingly
     item_class = BlogItem
 
     class Meta:
-        author_name = 'Akbar Hidayat'
-        author_url = 'https://plus.google.com/u/0/+AkbarHidayat-keripix/about'
+        author_name = 'Endip Yus Fauzi'
+        author_url = 'http://mampiro.com/tentang-saya'
 
     def parse_node(self, response, selector):
         l = ItemLoader(item=self.item_class(), selector=selector, response=response)
